@@ -5,7 +5,7 @@
       <strong>{{ todo.id }}</strong>
       {{ todo.title }}
     </span>
-    <button class="rm" v-on:click="$emit('remove-todo', todo.id)"> //Начинаем передавать событие вверх по цепочке компонентов
+    <button class="rm" v-on:click="$emit('remove-todo', todo.id)"> <!--Начинаем передавать событие вверх по цепочке компонентов-->
       &times;
     </button>
   </li>
