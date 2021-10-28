@@ -2,7 +2,9 @@
   <div id="app">
     <h1>Todo application(c)V.Minin</h1>
     <hr />
-    <TodoList v-bind:todos="todos" />
+    <TodoList 
+      v-bind:todos="todos"
+      @remove-todo="removeTodo" />
 
     <!--<img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>    was default -->
@@ -28,6 +30,11 @@ export default {
     //HelloWorld //was default
     TodoList,
   },
+  methods: {
+    removeTodo(id){
+      this.todos = this.todos.filter(t => t.id !== id)
+    }
+  }
 };
 </script>
 
