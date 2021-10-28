@@ -1,14 +1,8 @@
 <template>
   <div id="app">
-<h1>Todo application(c)V.Minin</h1>
-<hr>
-
-
-
-
-
-
-
+    <h1>Todo application(c)V.Minin</h1>
+    <hr />
+    <TodoList v-bind:todos="todos" />
 
     <!--<img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>    was default -->
@@ -17,13 +11,24 @@
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue' //was default
+import TodoList from "@/components/TodoList";
 
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      todos: [
+        { id: 1, title: "Купить хлеб", completed: false },
+        { id: 2, title: "Купить масло", completed: false },
+        { id: 3, title: "Купить пиво", completed: false },
+      ],
+    };
+  },
   components: {
     //HelloWorld //was default
-  }
-}
+    TodoList,
+  },
+};
 </script>
 
 <style>
