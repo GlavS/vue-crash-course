@@ -4,7 +4,7 @@
     <hr />
     <TodoList 
       v-bind:todos="todos"
-      @remove-todo="removeTodo" />
+      @r-todo="removTodo" />
 
     <!--<img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>    was default -->
@@ -31,7 +31,7 @@ export default {
     TodoList,
   },
   methods: {
-    removeTodo(id){
+    removTodo(id){
       this.todos = this.todos.filter(t => t.id !== id)
     }
   }

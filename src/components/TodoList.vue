@@ -5,7 +5,7 @@
         v-for="t in todos" 
         v-bind:todo="t" 
         v-bind:key="t.id"
-        v-on:remove-todo="removeTodo" />
+        v-on:remove-todo="remTodo" /> <!-- Мы получили событие remove-todo и передаем его обработчику remTodo -->
     </ul>
   </div>
 </template>
@@ -19,8 +19,8 @@ export default {
     TodoItem,
   },
   methods: {
-    removeTodo(id){
-      this.$emit('remove-todo', id)
+    remTodo(id){
+      this.$emit('r-todo', id)
     }
   }
 };
