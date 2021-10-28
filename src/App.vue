@@ -1,5 +1,15 @@
 <template>
   <div id="app">
+<h1>Todo application(c)V.Minin</h1>
+<hr>
+
+
+
+
+
+
+
+
     <!--<img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>    was default -->
   </div>
